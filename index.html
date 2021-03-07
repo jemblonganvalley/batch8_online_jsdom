@@ -15,7 +15,7 @@
     
     <!--NAVIGASI BAR-->
 
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         
         <h3 class="brand">jvalley</h3>
 
@@ -39,12 +39,57 @@
 
         </ul>
 
+        <span class="material-icons menu_icon" onclick="showMenu()">menu</span>
+
     </nav>
 
     <!--END NAVIGASI BAR-->
 
+    <!--MENU MOBILE-->
+
+    <ul class="menu_mobile" id="menu_mobile">
+
+        <li class="menu_mobile_item"><a href="#home">home</a></li>
+        <li class="menu_mobile_item"><a href="#about">about</a></li>
+        <li class="menu_mobile_item"><a href="#contact">contact</a></li>
+        <li class="menu_mobile_item"><a href="#gallery">gallery</a></li>
+
+    </ul>
+
+    <!--END MENU MOBILE-->
 
 
+    <script>
+
+        let show = true
+
+        //membuat prototype function
+        function showMenu(){
+            //select element menu mobile
+            let mm = document.getElementById('menu_mobile')
+
+            //mengunakan operasi perbandingan
+            if(show === true){
+
+                //atur style elem menu mobile
+                mm.style.transform = 'translateX(0)'
+
+                //atur nilai show menjadi false
+                show = false
+
+                // console.log(show)
+            }else{
+                //atur style elem menu mobile
+                mm.style.transform = 'translateX(38vw)'
+
+                //atur nilai show menjadi false
+                show = true
+
+                // console.log(show)
+            }
+        }
+
+    </script>
 
 </body>
 </html>
